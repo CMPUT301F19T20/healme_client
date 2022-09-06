@@ -11,7 +11,11 @@ import {
   FormHelperText,
   Link,
   TextField,
-  Typography
+  Typography,
+  FormControl,
+  Select,
+  InputLabel,
+  MenuItem
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { max } from 'date-fns';
@@ -94,7 +98,7 @@ const Register = () => {
           alert("Email already taken, please try another email!");
           return;
         }
-        alert("Sign up sucessful!");
+        alert("Sign up successful!");
         router.push("/");
       })
     }
@@ -194,18 +198,24 @@ const Register = () => {
               value={formik.values.password}
               variant="outlined"
             />
-            <TextField
-              error={Boolean(formik.touched.gender && formik.errors.gender)}
-              fullWidth
-              helperText={formik.touched.gender && formik.errors.gender}
-              label="Gender"
-              margin="normal"
-              name="gender"
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
+
+            <FormControl fullWidth margin="normal">
+              <InputLabel id="demo-simple-select-label">Select Gender</InputLabel>
+              <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
               value={formik.values.gender}
-              variant="outlined"
-            />
+              name="gender"
+              label="Select Gender"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              >
+              <MenuItem value={'male'}>Male</MenuItem>
+              <MenuItem value={'female'}>Female</MenuItem>
+              <MenuItem value={'intersex'}>Intersex</MenuItem>
+              </Select>
+            </FormControl>
+
             <TextField
               error={Boolean(formik.touched.userName && formik.errors.userName)}
               fullWidth
@@ -218,18 +228,21 @@ const Register = () => {
               value={formik.values.userName}
               variant="outlined"
             />
-            <TextField
-              error={Boolean(formik.touched.userType && formik.errors.userType)}
-              fullWidth
-              helperText={formik.touched.userType && formik.errors.userType}
-              label="User Type"
-              margin="normal"
-              name="userType"
-              onBlur={formik.handleBlur}
-              onChange={formik.handleChange}
+            <FormControl fullWidth margin="normal">
+              <InputLabel id="demo-simple-select-label">Select User Type</InputLabel>
+              <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
               value={formik.values.userType}
-              variant="outlined"
-            />
+              name="userType"
+              label="Select UserType"
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              >
+              <MenuItem value={'patient'}>Patient</MenuItem>
+              <MenuItem value={'Admin'}>Admin</MenuItem>
+              </Select>
+            </FormControl>
             <Box
               sx={{
                 alignItems: 'center',
