@@ -30,25 +30,30 @@ const GarminNavbar = (props) => {
     
     return (
         <div>
-            <AppBar position='static' sx={{bgcolor:curr_color }}>
-                <Toolbar sx={{display:'flex', justifyContent:'space-around'}}>
+            <AppBar position='static' sx={{bgcolor:"inherit"}}>
+                <Toolbar sx={{display:'flex', justifyContent:'center'}}>
+                    <div style={{alignItems:'center', marginRight:'1rem'}}>
+                        <h5 style={{color:'#474244'}}>Select Period:</h5>
+                    </div>
                     <Stack direction='row' spacing={5}>
                         <Button  
                             onClick={() => getCurrPeriod('7d')}
                             sx={{
                                 ':focus':{
                                     bgcolor:'#474244',
+                                    color:'inherit'
                                 },
-                                color:'inherit'
+                                color:'#474244'
                             }}
                          >7d</Button>
-                        <Button  
+                        <Button 
                             onClick={() => getCurrPeriod('4w')}
                             sx={{
                                 ':focus':{
                                     bgcolor:'#474244',
+                                    color:'inherit'
                                 },
-                                color:'inherit'
+                                color:'#474244',
                             }}
                         >4w</Button>
                         <Button  
@@ -56,8 +61,9 @@ const GarminNavbar = (props) => {
                             sx={{
                                 ':focus':{
                                     bgcolor:'#474244',
+                                    color:'inherit'
                                 },
-                                color:'inherit'
+                                color:'#474244'
                             }}
                         >1y</Button>
                     </Stack>

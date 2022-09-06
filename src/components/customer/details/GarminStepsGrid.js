@@ -47,12 +47,12 @@ const GarminStepsGrid = (props) => {
                         <DataItem>{totalDistance} KM</DataItem>
                     </Grid>
                     <Grid item xs={6}>
-                        <HeaderItem>Avg Daily Steps</HeaderItem>
+                        <HeaderItem>Average Daily Steps</HeaderItem>
                         <DataItem>{avgSteps} Steps</DataItem>
                     </Grid>
                     {props.data.isNot7d &&
                         <Grid item xs={6}>
-                            <HeaderItem>Avg Weekly</HeaderItem>
+                            <HeaderItem>Average Weekly Steps</HeaderItem>
                             <DataItem>{avgWeeklySteps} Steps</DataItem>
                         </Grid>
                     }

@@ -28,11 +28,11 @@ const Detail_navbar = (props) => {
             </li>
 
             <li>
-                <a onClick={() => redirect('lightbuzz')}>LightBuzz</a>
+                <a onClick={() => redirect('lightbuzz')}>MoCap</a>
             </li>
         
             <li>
-                <a onClick={() => redirect('foodrx')}>RXFood</a>
+                <a onClick={() => redirect('foodrx')}>Nutrition</a>
             </li>
             <li>
                 <a onClick={() => redirect('garmin')}>Garmin</a>

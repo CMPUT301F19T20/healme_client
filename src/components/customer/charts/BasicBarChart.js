@@ -3,16 +3,16 @@ import dynamic from 'next/dynamic';
 
 const BasicBarChart = (props) => {
     const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
-    const stepData = props.data.map(row => row.stepsCount);
-    const date = props.data.map(row => row.date);
+    const data = props.data;
+    const date = props.date
     return (
         <div>
             <Chart
             type="bar"
             height={300}
             series={[{
-                name:'Steps Count',
-                data:stepData,
+                name:props.title,
+                data:data,
             }]}
             options={{
                 chart:{
@@ -24,6 +24,15 @@ const BasicBarChart = (props) => {
                     horizontal:false,
                     endingShape:'rounded'
                     }
+                },
+                title:{
+                    text:'Daily '+props.title,
+                    align:'left',
+                    style:{
+                        fontSize:  '20px',
+                        fontWeight:  'bold',
+                        color:  '#263238'
+                    },
                 },
                 colors: [props.color],
                 dataLabels: {

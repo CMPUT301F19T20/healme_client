@@ -28,11 +28,11 @@ const GarminHRGrid = (props) => {
             <Box sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                     <Grid item xs={6}>
-                        <HeaderItem>Avg Resting HR </HeaderItem>
+                        <HeaderItem>Average Resting HR </HeaderItem>
                         <DataItem>{resthr} bpm</DataItem>
                     </Grid>
                     <Grid item xs={6}>
-                        <HeaderItem>Avg High HR</HeaderItem>
+                        <HeaderItem>Average Max HR</HeaderItem>
                         <DataItem>{highhr} bpm</DataItem>
                     </Grid>
                 </Grid>

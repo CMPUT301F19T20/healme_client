@@ -1,12 +1,12 @@
-import React from 'react';
-import Detail_navbar from 'src/components/customer/detail-navbar';
-
+import React from 'react'
 import Lightbuzz from 'src/components/customer/details/Lightbuzz';
+import Detail_navbar from 'src/components/customer/detail-navbar';
 
 const lightbuzz = () => {
   return (
     <div>
-        lightbuzz
+        <Detail_navbar firstName={'bob'} lastName={'Larry'}/>
+        <Lightbuzz />
     </div>
   )
 }

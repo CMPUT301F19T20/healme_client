@@ -58,7 +58,7 @@ export const GoalBarChart = (props) => {
                 },
                 yaxis:{
                     title:{
-                        text:'Vigorous Minutes'
+                        text:props.text
                     }
                 },
             }}

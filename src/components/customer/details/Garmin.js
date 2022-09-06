@@ -1,9 +1,4 @@
 import React from 'react'
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
-import GarminCard from './GarminCard';
-import { garminData } from '../PageTable';
 import GarminSummary from './GarminSummary';
 import GarminOverallSummary from './GarminOverallSummary';
 
@@ -17,9 +12,11 @@ export const Garmin = (props) => {
   const avgCalorie = props.overall_info.avgCalorie;
   const avgRestHR = props.overall_info.avgRestHR;
   const avgHighHR = props.overall_info.avgHighHR;
+  const date = props.data.healthSummary.sort((a,b) =>(a.calendardate>b.calendardate)?1:-1).map(row => row.calendardate);
+  console.log(date)
   return (
     <div>
-      <GarminOverallSummary avgSteps={avgSteps} avgStepsCategory={avgStepsCategory}
+      <GarminOverallSummary avgSteps={avgSteps} avgStepsCategory={avgStepsCategory} date={date}
           avgTime={avgIntenseMins} avgTimeCategory={avgIntenseMinsCategory} avgDuration={avgActivityTime}
           avgEnergy={avgCalorie} avgRestHR={avgRestHR} avgHighHR={avgHighHR} name={props.name}/>
       <GarminSummary data={props.data}/>

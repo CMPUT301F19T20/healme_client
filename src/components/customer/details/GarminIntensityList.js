@@ -44,7 +44,7 @@ const GarminIntensityList = (props) => {
                         </div>
                         
                         <div style={{display:'flex',justifyContent:'space-around',alignItems:'center'}}>
-                            <h4 style={{marginRight:'2rem'}}>{row.intense} min</h4>
+                            <h4 style={{marginRight:'2rem'}}>{row.intense} minutes</h4>
                             <CircularProgressBar value={row.goalPct}/>
                         </div>
                     </div>

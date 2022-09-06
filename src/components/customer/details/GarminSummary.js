@@ -29,7 +29,7 @@ const GarminSummary = (props) => {
     return (
         <div>
             <div>
-                <Collapsible label="Steps Summary" color="#0FB4E4" >
+                <Collapsible label="Step Count Summary" color="#0FB4E4" >
                     <Steps data={props.data} changeState={changeStepState}/>
                 </Collapsible>
             </div>

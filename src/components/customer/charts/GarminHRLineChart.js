@@ -12,11 +12,11 @@ const GarminHRLineChart = (props) => {
             type="line"
             height={300}
             series={[{
-                name:'Resting Average Rate',
+                name: 'Resting HR',
                 data:avgRestHr,
             },
             {
-                name:'High Average Rate',
+                name:'Max HR',
                 data:avgHighHr,
             },
             ]}
@@ -30,7 +30,12 @@ const GarminHRLineChart = (props) => {
                 colors: ['#0F90E4','#E40F2F'],
                 title: {
                     text: 'Heart Rate Summary',
-                    align: 'left'
+                    align: 'left',
+                    style:{
+                        fontSize:  '20px',
+                        fontWeight:  'bold',
+                        color:  '#263238'
+                    },
                 },
                 
                 dataLabels: {

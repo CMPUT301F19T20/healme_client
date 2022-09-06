@@ -43,8 +43,13 @@ const Steps = (props) => {
             <div>
                 <GarminStepsGrid data={subData}/>
             </div>
-            <div style={{marginBottom:'1rem'}}>
-                <BasicBarChart data={subData} color={'#0FB4E4'} text={'Steps Count'}/>
+            <div style={{marginBottom:'1rem',marginTop:'1rem'}}>
+                <BasicBarChart 
+                data={subData.map(row=>row.stepsCount)} 
+                color={'#0FB4E4'} 
+                text={'Steps Count'}
+                title={'Step Count'}
+                date={subData.map(row=>row.date)} />
             </div>
         </div>
     )

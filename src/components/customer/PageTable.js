@@ -66,7 +66,7 @@ export const PageTable = (props) => {
     const {pageIndex, pageSize, globalFilter} = state;
     return (
         <>
-            <div className='filter' style={{position:'relative', left:'800px'}}>
+            <div className='filter' style={{position:'relative', marginLeft:'60rem'}}>
                 <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>

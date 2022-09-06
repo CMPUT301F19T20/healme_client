@@ -16,23 +16,27 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 const GarminOverallSummary = (props) => {
-    const stepsDesc = "Steps Count";
-    const intensityDesc = "Intensity Minutes";
-    const activitiesDesc = "Activities & Energy";
-    const heartrateDesc = "Heart Rate"
-    const stepFirstText = "Average Daily Steps Count: " + props.avgSteps + " steps";
-    const stepSecondText = "Evaluation Category: " + props.avgStepsCategory;
+    const stepsDesc = "Step Count";
+    const intensityDesc = "Intensity";
+    const activitiesDesc = "Activity Output";
+    const heartrateDesc = "Heart Rate (HR)"
+    const stepFirstText = "Average Daily Step Count: " + props.avgSteps + " steps";
+    const stepSecondText = "Fitness Category: " + props.avgStepsCategory;
     const intensityFirstText = "Average Daily Intensity Duration: " + props.avgTime + " mins";
-    const intensitySecondText = "Evaluation Category: " + props.avgTimeCategory;
+    const intensitySecondText = "Fitness Category: " + props.avgTimeCategory;
     const activityFirstText = "Average Daily Activity Duration: " + props.avgDuration + " mins";
-    const activitySecondText = "Average Daily Energy Consumed: " + props.avgEnergy + " kcal";
+    const activitySecondText = "Average Daily Caloric Output: " + props.avgEnergy + " kcal";
     const heartFirstText = "Average Daily Resting HR: " + props.avgRestHR + " bpm";
     const heartSecondText = "Average Daily High HR: " + props.avgHighHR + " bpm";
-    const name = props.name;
+    const date = props.date;
+    
     return (
         <div>
             <div className='title'>
                 <h1>Garmin Daily Averages</h1>
+            </div>
+            <div className='date'>
+                <h3>Date: {date[0]} to {date.at(-1)}</h3>
             </div>
             <Box sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
