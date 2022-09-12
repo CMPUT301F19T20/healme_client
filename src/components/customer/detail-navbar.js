@@ -1,15 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { Button } from '@mui/material';
 
 const Detail_navbar = (props) => {
-    const lightbuzz_path = '/customers/' + props.firstName + '/lightbuzz'
-    const foodrx_path = '/customers/' + props.firstName + '/foodrx'
-    const garmin_path = '/customers/' + props.firstName + '/garmin'
-    const survey_path = '/customers/' + props.firstName + '/survey'
-    const general_path = '/customers/' + props.firstName
     const name = props.firstName+' '+props.lastName;
-    console.log(name)
+    const currPage = props.currPage;
+
+    const generalState = currPage=='general' ? true : false;
+    const mocapState = currPage=='mocap' ? true : false;
+    const foodState = currPage=='foodrx' ? true : false;
+    const garminState = currPage=='garmin' ? true : false;
+    const surveyState = currPage=='survey' ? true : false;
+
     const router = useRouter();
     const redirect = (category) => {
         const pathname = '/customers/' + props.firstName + '/' +category;
@@ -24,22 +27,22 @@ const Detail_navbar = (props) => {
         <h1 className="title"> {name} </h1>
         <ul>
             <li>
-                <a onClick={() => redirect('')}>General</a>
+                <a style={{fontSize:generalState?'25px':'15px', fontWeight:generalState?'bold':'normal'}} onClick={() => redirect('')}>General</a>
             </li>
 
             <li>
-                <a onClick={() => redirect('lightbuzz')}>MoCap</a>
+                <a style={{fontSize:mocapState?'25px':'15px', fontWeight:mocapState?'bold':'normal'}}onClick={() => redirect('lightbuzz')}>MoCap</a>
             </li>
         
             <li>
-                <a onClick={() => redirect('foodrx')}>Nutrition</a>
+                <a style={{fontSize:foodState?'25px':'15px', fontWeight:foodState?'bold':'normal'}}onClick={() => redirect('foodrx')}>Nutrition</a>
             </li>
             <li>
-                <a onClick={() => redirect('garmin')}>Garmin</a>
+                <a style={{fontSize:garminState?'25px':'15px', fontWeight:garminState?'bold':'normal'}}onClick={() => redirect('garmin')}>Garmin</a>
             </li>
             
             <li>
-                <a onClick={() => redirect('survey')}>Survey</a>
+                <a style={{fontSize:surveyState?'25px':'15px', fontWeight:surveyState?'bold':'normal'}}onClick={() => redirect('survey')}>Survey</a>
             </li>
         </ul>
     </nav>

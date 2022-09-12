@@ -20,9 +20,12 @@ const BasicBarChart = (props) => {
                 },
                 plotOptions: {
                     bar: {
-                    columnWidth: '40%',
-                    horizontal:false,
-                    endingShape:'rounded'
+                        columnWidth: '40%',
+                        horizontal:false,
+                        endingShape:'rounded',
+                        dataLabels:{
+                            position:'top'
+                        }
                     }
                 },
                 title:{

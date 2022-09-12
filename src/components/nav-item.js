@@ -32,6 +32,7 @@ export const NavItem = (props) => {
             borderRadius: 1,
             color: active ? 'secondary.main' : 'neutral.300',
             fontWeight: active && 'fontWeightBold',
+            fontSize: active ? '20px' : '13px',
             justifyContent: 'flex-start',
             px: 3,
             textAlign: 'left',
@@ -42,7 +43,8 @@ export const NavItem = (props) => {
             },
             '&:hover': {
               backgroundColor: 'rgba(255,255,255, 0.08)'
-            }
+            },
+            
           }}
         >
           <Box sx={{ flexGrow: 1 }}>

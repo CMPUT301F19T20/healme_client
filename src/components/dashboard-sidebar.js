@@ -26,7 +26,7 @@ const items = [
   {
     href: '/account',
     icon: (<UserIcon fontSize="small" />),
-    title: 'Account'
+    title: 'My Profile'
   },
   
 ];
@@ -125,11 +125,12 @@ export const DashboardSidebar = (props) => {
         />
         <Box sx={{ flexGrow: 1 }}>
           {items.map((item) => (
-            <NavItem
+            <NavItem 
               key={item.title}
               icon={item.icon}
               href={item.href}
               title={item.title}
+              
             />
           ))}
         </Box>

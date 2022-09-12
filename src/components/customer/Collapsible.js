@@ -9,7 +9,7 @@ export const Collapsible = (props) => {
     const color = props.color;
     return (
         <div className="collapsible">
-            <button className="toggle" style={{backgroundColor:color}} onClick={() => setIsOpen(!isOpen)}>{props.label}</button>
+            <button className="toggle" style={{backgroundColor:color, fontWeight:'bold'}} onClick={() => setIsOpen(!isOpen)}>{props.label}</button>
             <div className="content-parent" 
                 ref={parentRef} 
                 style={isOpen ? 

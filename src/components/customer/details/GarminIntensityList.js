@@ -31,7 +31,7 @@ const GarminIntensityList = (props) => {
                     '& ul': { padding: 0 },
                 }}>
                 {listData.map(row => (
-                    <div key={row.date} style={{display:'flex',justifyContent:'space-around'}}>
+                    <div key={row.date} style={{display:'flex',justifyContent:'space-evenly'}}>
                         <div>
                             <ListItem>
                                 <ListItemAvatar>
@@ -43,7 +43,7 @@ const GarminIntensityList = (props) => {
                             </ListItem>
                         </div>
                         
-                        <div style={{display:'flex',justifyContent:'space-around',alignItems:'center'}}>
+                        <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                             <h4 style={{marginRight:'2rem'}}>{row.intense} minutes</h4>
                             <CircularProgressBar value={row.goalPct}/>
                         </div>

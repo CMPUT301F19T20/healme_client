@@ -40,55 +40,11 @@ const UserGarmin = () => {
   },[])
 
   if (garminData!=undefined){
-    const getDataAvg = (table,category) => {
-      var total = 0;
-      var item;
-      for (let i=0;i<table.length;i++){
-        item = table[i];
-        total = total + parseInt(item[category]);
-      }
-      var avg = parseInt(total/(table.length));
-      return avg
-    }
-  
-    const secToMin = (val) => {
-      return parseInt(val/60);
-    }
-    const getRankCategory = (val) => {
-      if (val<5000){
-        return 'Sedentary';
-      }else if(5000 <= val < 7500){
-        return 'Low Active'
-      }else if(7500 <= val < 10000){
-        return 'Somewhat Active'
-      }else if(10000 <= val < 12500){
-        return 'Active'
-      }else{
-        return 'Highly Active'
-      }
-    }
-    const overall_info = {};
-    var avgSteps = getDataAvg(garminData.healthSummary,"steps");
-    overall_info.avgSteps = avgSteps;
-    var stepsCategory = getRankCategory(avgSteps);
-    overall_info.stepsCategory = stepsCategory;
-    var avgIntenseMins = secToMin(getDataAvg(garminData.healthSummary,"vigorousintensitydurationinseconds"));
-    overall_info.avgIntenseMins = avgIntenseMins;
-    var avgIntenseMinsCategory = getRankCategory(avgIntenseMins);
-    overall_info.avgIntenseMinsCategory = avgIntenseMinsCategory;
-    var avgActivityTime = secToMin(getDataAvg(garminData.activitySummary,"durationinseconds"));
-    overall_info.avgActivityTime = avgActivityTime;
-    var avgCalorie = getDataAvg(garminData.calorieSummary,"activekilocalories");
-    overall_info.avgCalorie = avgCalorie;
-    var avgRestHR = getDataAvg(garminData.healthSummary,"restingheartrateinbeatsperminute");
-    overall_info.avgRestHR = avgRestHR;
-    var avgHighHR = getDataAvg(garminData.healthSummary,"maxheartrateinbeatsperminute");
-    overall_info.avgHighHR = avgHighHR;
   
     return (
       <div>
-          <Detail_navbar firstName={garminData.firstName} lastName={garminData.lastName}/>
-          <Garmin overall_info={overall_info} data={garminData} name={garminData.firstName+garminData.lastName}/>
+          <Detail_navbar firstName={garminData.firstName} lastName={garminData.lastName} currPage={'garmin'}/>
+          <Garmin data={garminData} name={garminData.firstName+garminData.lastName}/>
       </div>
     )
   }else{

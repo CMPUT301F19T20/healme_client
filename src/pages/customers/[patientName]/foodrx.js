@@ -68,7 +68,7 @@ const Foodrx = (props) => {
 
     return (
       <div>
-          <Detail_navbar firstName={foodrxData.firstName} lastName={foodrxData.lastName}/>
+          <Detail_navbar firstName={foodrxData.firstName} lastName={foodrxData.lastName} currPage={'foodrx'}/>
           <RXFood firstName={foodrxData.firstName} lastName={foodrxData.lastName} avgcal={avgCalorie} calorieTotal={totalCalorie}
           avgCarbo={avgCarbo} totalCarbo={totalCarbo} proteinAvg={avgProtein} nDays={numDays} fatRatio={fatTargetPct}
           fatSeries={fatSeries} macroSeries={macroDistSeries} avgBreakfastSeries={avgPlateBreakfastSeries} 

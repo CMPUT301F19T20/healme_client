@@ -32,7 +32,7 @@ export const PatientDetails = () => {
     
     return (
         <div>
-            <Detail_navbar firstName={firstName} lastName={lastName}/>
+            <Detail_navbar firstName={firstName} lastName={lastName} currPage={'general'}/>
             <General series={generalRadarSeries} options={generalRadarOptions} />
         </div>
     )

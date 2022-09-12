@@ -10,9 +10,11 @@ const CircularProgressBar = (props) => {
         value = 100;
     }
 
+    const goalMeet = value==100?true:false;
+
     return (
         <Box sx={{ position: 'relative', display: 'inline-flex'}}>
-            <CircularProgress variant="determinate" value={value} size='4rem'/>
+            <CircularProgress sx={{color:goalMeet?'#4CD96C':'#E02E23'}} variant="determinate" value={value} size='4rem'/>
             <Box
                 sx={{
                 top: 0,

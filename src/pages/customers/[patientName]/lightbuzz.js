@@ -5,7 +5,7 @@ import Detail_navbar from 'src/components/customer/detail-navbar';
 const lightbuzz = () => {
   return (
     <div>
-        <Detail_navbar firstName={'bob'} lastName={'Larry'}/>
+        <Detail_navbar firstName={'bob'} lastName={'Larry'} currPage={'mocap'}/>
         <Lightbuzz />
     </div>
   )

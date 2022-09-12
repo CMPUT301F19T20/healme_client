@@ -72,7 +72,7 @@ export const PageTable = (props) => {
             <div style={{display: 'flex', justifyContent: 'center'}}>
                 <div style={{marginTop: '80px', marginRight: '80px'}}>
                     <div>
-                        <CBX {...getToggleHideAllColumnsProps()} /> Toggle All
+                        <CBX {...getToggleHideAllColumnsProps()} /> All Columns
                     </div>
                     {
                         allColumns.map(column => (

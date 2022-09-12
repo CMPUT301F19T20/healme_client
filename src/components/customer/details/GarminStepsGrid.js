@@ -36,28 +36,47 @@ const GarminStepsGrid = (props) => {
     }
     return (
         <div>
+            {props.data.isNot7d &&
             <Box sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    <Grid item xs={6}>
-                        <HeaderItem>Total Steps</HeaderItem>
+                    <Grid item xs={3}>
+                        <HeaderItem>Total Steps Count</HeaderItem>
                         <DataItem>{totalSteps} Steps</DataItem>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={3}>
                         <HeaderItem>Total Distance</HeaderItem>
                         <DataItem>{totalDistance} KM</DataItem>
                     </Grid>
-                    <Grid item xs={6}>
-                        <HeaderItem>Average Daily Steps</HeaderItem>
+                    <Grid item xs={3}>
+                        <HeaderItem>Average Daily Steps Count</HeaderItem>
                         <DataItem>{avgSteps} Steps</DataItem>
                     </Grid>
-                    {props.data.isNot7d &&
-                        <Grid item xs={6}>
-                            <HeaderItem>Average Weekly Steps</HeaderItem>
-                            <DataItem>{avgWeeklySteps} Steps</DataItem>
-                        </Grid>
-                    }
+                    <Grid item xs={3}>
+                        <HeaderItem>Average Weekly Steps Count</HeaderItem>
+                        <DataItem>{avgWeeklySteps} Steps</DataItem>
+                    </Grid>
                 </Grid>
-            </Box>
+            </Box>}
+
+            {props.data.isNot7d==false &&
+            <Box sx={{ width: '100%' }}>
+                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                    <Grid item xs={4}>
+                        <HeaderItem>Total Steps Count</HeaderItem>
+                        <DataItem>{totalSteps} Steps</DataItem>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <HeaderItem>Total Distance</HeaderItem>
+                        <DataItem>{totalDistance} KM</DataItem>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <HeaderItem>Average Daily Steps Count</HeaderItem>
+                        <DataItem>{avgSteps} Steps</DataItem>
+                    </Grid>
+    
+                </Grid>
+            </Box>}
+        
         </div>
     )
 }

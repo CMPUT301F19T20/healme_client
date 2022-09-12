@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import {AppBar, Toolbar, IconButton, Typography, Stack, Button} from "@mui/material"
 import HikingIcon from '@mui/icons-material/Hiking';
 import AccessAlarmIcon from '@mui/icons-material/AccessAlarm';
@@ -6,9 +6,13 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
 
 const GarminNavbar = (props) => {
+    const [currPeriod, setCurrPeriod] = useState('4w')
     const getCurrPeriod = (period) => {
-        props.getPeriod(period)
+        props.getPeriod(period);
+        setCurrPeriod(period)
     };
+    
+
     var icon,text,curr_color;
     if (props.type == 'steps'){
         icon = <HikingIcon />;
@@ -27,6 +31,10 @@ const GarminNavbar = (props) => {
         text = 'Heart Rate';
         curr_color = '#D22B2B'
     }
+
+    const currIs7d = currPeriod=='7d' ? true : false;
+    const currIs4w = currPeriod=='4w' ? true : false;
+    const currIs1y = currPeriod=='1y' ? true : false;
     
     return (
         <div>
@@ -39,31 +47,22 @@ const GarminNavbar = (props) => {
                         <Button  
                             onClick={() => getCurrPeriod('7d')}
                             sx={{
-                                ':focus':{
-                                    bgcolor:'#474244',
-                                    color:'inherit'
-                                },
-                                color:'#474244'
+                                bgcolor:currIs7d?'#474244':'inherit',
+                                color:currIs7d?'inherit':'#474244'
                             }}
                          >7d</Button>
                         <Button 
                             onClick={() => getCurrPeriod('4w')}
                             sx={{
-                                ':focus':{
-                                    bgcolor:'#474244',
-                                    color:'inherit'
-                                },
-                                color:'#474244',
+                                bgcolor:currIs4w?'#474244':'inherit',
+                                color:currIs4w?'inherit':'#474244'
                             }}
                         >4w</Button>
                         <Button  
                             onClick={() => getCurrPeriod('1y')}
                             sx={{
-                                ':focus':{
-                                    bgcolor:'#474244',
-                                    color:'inherit'
-                                },
-                                color:'#474244'
+                                bgcolor:currIs1y?'#474244':'inherit',
+                                color:currIs1y?'inherit':'#474244'
                             }}
                         >1y</Button>
                     </Stack>

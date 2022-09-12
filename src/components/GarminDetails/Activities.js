@@ -14,8 +14,8 @@ const Activities = (props) => {
     const activityType = props.data.activitySummary.map(row => row['activitytype']);
     const duration = props.data.activitySummary.map(row => row['durationinseconds']);
     const distance = props.data.activitySummary.map(row => row['distanceinmeters']);
-    const activeCal = props.data.calorieSummary.map(row => row['activekilocalories']);
-    const bmrCal = props.data.calorieSummary.map(row => row['bmrkilocalories']);
+    const activeCal = props.data.healthSummary.map(row => row['activekilocalories']);
+    const bmrCal = props.data.healthSummary.map(row => row['bmrkilocalories']);
     
 
 
@@ -47,7 +47,7 @@ const Activities = (props) => {
             </div>
             <div style={{marginBottom:'1rem'}}>
                 <PageDataTable cols={activity_cols} data={subData} pagination={true} 
-                        placeHolderText={'Activity Type'} filterCol={'activityType'} title={'Activities List'}/>
+                        placeHolderText={'Activity Type'} filterCol={'activityType'}/>
             </div>
             
         </div>

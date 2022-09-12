@@ -79,7 +79,6 @@ const PageDataTable = (props) => {
     
     return (
         <DataTable
-			title={props.title}
 			columns={columns}
 			data={filteredItems}
 			paginationResetDefaultPage={resetPaginationToggle} // optionally, a hook to reset pagination to page 1

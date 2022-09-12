@@ -41,6 +41,7 @@ const RXFood = (props) => {
     useEffect(() => {
         if (date!=undefined){
             const startDate = date.split("to")[0].slice(0,10);
+            console.log(startDate)
             for (let i=0;i<props.datePeriods.length;i++){
                 const tempDate = props.datePeriods[i].date_since.slice(0,10)
                 if (tempDate == startDate){
@@ -242,7 +243,7 @@ const RXFood = (props) => {
                 <Collapsible label="Micronutrients" color="#36454F">
                     <div className="micronutrients_row">
                         <PageDataTable cols={micro_data_cols} data={micro_data_rows} pagination={false} 
-                        placeHolderText={'nutrient'} filterCol={'nutrient'} title={'Micronutrients List'}/>
+                        placeHolderText={'nutrient'} filterCol={'nutrient'}/>
                     </div>
                 </Collapsible>
             </div>
