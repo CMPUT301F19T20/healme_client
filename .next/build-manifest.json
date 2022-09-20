@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/customers/[patientName]/foodrx": [
+    "/customers/[patientName]/garmin": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/customers/[patientName]/foodrx.js"
+      "static/chunks/pages/customers/[patientName]/garmin.js"
     ],
     "/customers/[patientName]/lightbuzz": [
       "static/chunks/webpack.js",

@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight:normal
+}
+
+
+.nutrients{
+    display: flex;
+    justify-content: center;
+}
+
+.meals{
+    margin-right: 10rem;
+}
+
+.macronutrients{
+    margin-right: 5rem;
+}
+
+
+@media (max-width:768px){
+    .nutrients{
+        display: block;
+    }
+    /* .meals{
+        padding: 2rem 0rem;
+        border: 1px solid black;
+        border-radius: 5px;
+        color: red;
+    } */
+}
+
+

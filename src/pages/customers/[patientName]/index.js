@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 export const PatientDetails = () => {
     
     const router = useRouter();
-    console.log(router.query);
     const firstName = router.query.firstname;
     const lastName = router.query.lastname;
     
@@ -28,8 +27,6 @@ export const PatientDetails = () => {
         labels: ['EASA Emotional','EASA physical','Macronutrients','Caloric intake','Protein intake','Moderate-to-vigorous physical activity minutes','step count','light physical activity','Physical activity minutes','Physical functioning'] 
     };
 
-
-    
     return (
         <div>
             <Detail_navbar firstName={firstName} lastName={lastName} currPage={'general'}/>

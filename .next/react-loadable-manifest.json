@@ -1,5 +1,29 @@
 {
-  "../components/customer/charts/HorizontalBarChart.js -> react-apexcharts": {
+  "../components/customer/charts/BasicBarChart.js -> react-apexcharts": {
+    "id": "./node_modules/react-apexcharts/dist/react-apexcharts.min.js",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "../components/customer/charts/GarminHRLineChart.js -> react-apexcharts": {
+    "id": "./node_modules/react-apexcharts/dist/react-apexcharts.min.js",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "../components/customer/charts/GarminHrvLineChart.js -> react-apexcharts": {
+    "id": "./node_modules/react-apexcharts/dist/react-apexcharts.min.js",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "../components/customer/charts/GarminSleepDistChart.js -> react-apexcharts": {
+    "id": "./node_modules/react-apexcharts/dist/react-apexcharts.min.js",
+    "files": [
+      "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"
+    ]
+  },
+  "../components/customer/charts/GoalBarchart.js -> react-apexcharts": {
     "id": "./node_modules/react-apexcharts/dist/react-apexcharts.min.js",
     "files": [
       "static/chunks/node_modules_react-apexcharts_dist_react-apexcharts_min_js.js"

@@ -1,13 +1,16 @@
 import React, {useState} from 'react'
 import Collapsible from '../Collapsible';
 
-import Steps from 'src/components/GarminDetails/Steps';
-import Intensity from 'src/components/GarminDetails/Intensity';
-import Heartrate from 'src/components/GarminDetails/Heartrate';
-import Activities from 'src/components/GarminDetails/Activities';
+import Steps from 'src/components/customer/details/GarminDetails/Steps';
+import Intensity from 'src/components/customer/details/GarminDetails/Intensity';
+import Heartrate from 'src/components/customer/details/GarminDetails/Heartrate';
+import Activities from 'src/components/customer/details/GarminDetails/Activities';
+import Sleep from 'src/components/customer/details/GarminDetails/Sleep';
+import HRV from './GarminDetails/HRV';
 
 
 const GarminSummary = (props) => {
+    console.log(props.data)
     const [stepPeriod,setStepPeriod] = useState('4w');
     const [intensityPeriod, setIntensityPeriod] = useState('4w');
     const [activityPeriod, setActivityPeriod] = useState('4w');
@@ -46,6 +49,16 @@ const GarminSummary = (props) => {
             <div>
                 <Collapsible label="Activities Summary" color="#E49B0F" >
                     <Activities data={props.data} changeState={changeActivityState}/>
+                </Collapsible>
+            </div>
+            <div>
+                <Collapsible label="Sleep Summary" color="#928989" >
+                    <Sleep data={props.data.sleepSummary}/>
+                </Collapsible>
+            </div>
+            <div>
+                <Collapsible label="HRV Summary" color="#333" >
+                    <HRV data={props.data.hrvSummary}/>
                 </Collapsible>
             </div>
         </div>

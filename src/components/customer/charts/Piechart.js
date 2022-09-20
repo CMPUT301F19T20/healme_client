@@ -20,7 +20,7 @@ export const Piechart = (props) => {
                 dataLabels: {
                   style: {
                     colors: ['#1B1212'],
-                    fontSize: '15px',
+                    fontSize: props.fontSize,
                     fontWeight:'normal'
                   }
                 }

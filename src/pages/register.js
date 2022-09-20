@@ -262,7 +262,7 @@ const Register = () => {
                 I have read the
                 {' '}
                 <NextLink
-                  href="#"
+                  href="https://docs.google.com/document/d/1xLe2DEQE73KliBvml14sdDEW3ChtbUZR/edit"
                   passHref
                 >
                   <Link

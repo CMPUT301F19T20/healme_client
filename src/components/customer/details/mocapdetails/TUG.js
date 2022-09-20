@@ -1,6 +1,6 @@
 import React from 'react'
 import {Grid, Typography,Paper,Box} from '@mui/material'
-import {HeaderItem,DataItem} from '../GridStyle';
+import {HeaderItem,DataItem} from '../garmingrids/GridStyle';
 
 const TUG = () => {
     return (

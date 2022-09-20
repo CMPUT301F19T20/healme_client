@@ -6,7 +6,6 @@ import { GlobalFilter } from './GlobalFilter';
 import { useRouter } from 'next/router';
 
 export const PageTable = (props) => {
-    console.log(props)
     const userData = props.patients.patients;
     userData.map(row => {
         row.created_date = row.created_date.slice(0,10);
@@ -66,7 +65,7 @@ export const PageTable = (props) => {
     const {pageIndex, pageSize, globalFilter} = state;
     return (
         <>
-            <div className='filter' style={{position:'relative', marginLeft:'60rem'}}>
+            <div className='filter'>
                 <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}/>
             </div>
             <div style={{display: 'flex', justifyContent: 'center'}}>

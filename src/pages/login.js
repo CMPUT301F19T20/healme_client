@@ -61,7 +61,6 @@ const Login = () => {
       .then(data =>{
         if(data){
           userData = data;
-          console.log(data)
           sessionStorage.setItem('user',data.profile.rows[0].email_addr)
           router.push({
             pathname: '/patients',

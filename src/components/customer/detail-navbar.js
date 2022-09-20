@@ -31,11 +31,11 @@ const Detail_navbar = (props) => {
             </li>
 
             <li>
-                <a style={{fontSize:mocapState?'25px':'15px', fontWeight:mocapState?'bold':'normal'}}onClick={() => redirect('lightbuzz')}>MoCap</a>
+                <a style={{fontSize:mocapState?'25px':'15px', fontWeight:mocapState?'bold':'normal'}}onClick={() => redirect('lightbuzz')}>Motion Analysis</a>
             </li>
         
             <li>
-                <a style={{fontSize:foodState?'25px':'15px', fontWeight:foodState?'bold':'normal'}}onClick={() => redirect('foodrx')}>Nutrition</a>
+                <a style={{fontSize:foodState?'25px':'15px', fontWeight:foodState?'bold':'normal'}}onClick={() => redirect('foodrx')}>Food Intake</a>
             </li>
             <li>
                 <a style={{fontSize:garminState?'25px':'15px', fontWeight:garminState?'bold':'normal'}}onClick={() => redirect('garmin')}>Garmin</a>

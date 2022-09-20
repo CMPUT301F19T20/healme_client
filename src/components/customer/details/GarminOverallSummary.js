@@ -5,32 +5,23 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import DirectionsBikeIcon from '@mui/icons-material/DirectionsBike';
 import {Grid, Typography,Paper,Box} from '@mui/material'
 import { styled } from '@mui/material/styles';
-import GarminDateFilter from './GarminDateFilter';
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+import GarminDateFilter from './datefilters/GarminDateFilter';
+import { makeStyles } from '@mui/material';
+import { theme } from 'src/theme';
 
 
 const GarminOverallSummary = (props) => {
     const garminData = props.data;
     const healthSummary = garminData.healthSummary.sort((a,b) => (a.calendardate>b.calendardate?1:-1))
     const date = healthSummary.map(row => row.calendardate);
-    console.log(date)
 
     const [startDate,setStartDate] = useState(date[0]);
     const [endDate,setEndDate] = useState(date.at(-1));
     const getStartDate = (inputStartDate) => {
         setStartDate(inputStartDate);
-        console.log(startDate)
     }
     const getEndDate = (inputEndDate) => {
         setEndDate(inputEndDate);
-        console.log(endDate);
     }
 
     const startIndex = date.indexOf(startDate);
@@ -92,7 +83,7 @@ const GarminOverallSummary = (props) => {
             </div>
             <Box sx={{ width: '100%' }}>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    <Grid className="category" item xs={3}>
+                    <Grid className="category" item xs={5} md={3}>
                         <div className="steps">
                             <div className='cate_header'>
                                 <HikingIcon />
@@ -104,7 +95,7 @@ const GarminOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={3}>
+                    <Grid className="category" item xs={5} md={3}>
                         <div className="intensity">
                             <div className='cate_header'>
                                 <AccessAlarmIcon />
@@ -116,7 +107,7 @@ const GarminOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={3}>
+                    <Grid className="category" item xs={5} md={3}>
                         <div className="activity">
                             <div className='cate_header'>
                                 <DirectionsBikeIcon />
@@ -128,7 +119,7 @@ const GarminOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={3}>
+                    <Grid className="category" item xs={5} md={3}>
                         <div className="heartrate">
                             <div className='cate_header'>
                                 <FavoriteIcon />

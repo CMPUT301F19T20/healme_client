@@ -162,7 +162,7 @@ const RXFood = (props) => {
                         </div>
                         <div className="macro_dist">
                             <h3>Macronutrient Distribution Chart</h3>
-                            <Piechart series={macroSeries} labels={macroLabels} />
+                            <Piechart series={macroSeries} labels={macroLabels} fontSize={'15px'}/>
                         </div>
                         <div className="calorie_dist">
                             <h3>Calorie Distribution Throughout the Day (kcal)</h3>
@@ -177,15 +177,15 @@ const RXFood = (props) => {
                         </div>
                         <div className="avg_plate">
                             <h3 className="avg_text">Average Plate Breakfast</h3>
-                            <Piechart series={breakfastSeries} labels={breakfastLabels} />
+                            <Piechart series={breakfastSeries} labels={breakfastLabels} fontSize={'15px'}/>
                         </div>
                         <div className="avg_plate">
                             <h3 className="avg_text">Average Plate Lunch</h3>
-                            <Piechart series={lunchSeries} labels={lunchLabels} />
+                            <Piechart series={lunchSeries} labels={lunchLabels} fontSize={'15px'}/>
                         </div>
                         <div className="avg_plate">
                             <h3 className="avg_text">Average Plate Dinner</h3>
-                            <Piechart series={dinnerSeries} labels={dinnerLabels} />
+                            <Piechart series={dinnerSeries} labels={dinnerLabels} fontSize={'15px'}/>
                         </div>
                     </div>
                 </Collapsible>
@@ -200,7 +200,7 @@ const RXFood = (props) => {
                     </div>
                     <div className="avg_grain_freq">
                         <h3>Intake of Whole vs. Refined Grains (%)</h3>
-                        <Piechart series={avgGrainSeries} labels={avgGrainLabels} />
+                        <Piechart series={avgGrainSeries} labels={avgGrainLabels} fontSize={'15px'}/>
                     </div>
                     <div className="grain_dist">
                         <h3>Distribution of Carbohydrates throughout the Day (grams)</h3>
@@ -219,7 +219,7 @@ const RXFood = (props) => {
                         </div>
                         <div className="protein_freq">
                             <h3>Distribution of Protein Intake (%)</h3>
-                            <Piechart series={proteinSeries} labels={proteinLabels} />
+                            <Piechart series={proteinSeries} labels={proteinLabels} fontSize={'15px'}/>
                         </div>
                     </div>
                 </Collapsible>
@@ -234,7 +234,7 @@ const RXFood = (props) => {
                         </div>
                         <div className="fat_freq">
                             <h3>Intake of Healthy vs. Unhealthy Fats (%)</h3>
-                            <Piechart series={fatSeries} labels={fatLabels} />
+                            <Piechart series={fatSeries} labels={fatLabels} fontSize={'15px'}/>
                         </div>
                     </div>
                 </Collapsible>

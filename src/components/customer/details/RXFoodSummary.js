@@ -1,18 +1,18 @@
 import React from 'react'
-import RxfoodDateFilter from './RxfoodDateFilter'
+import RxfoodDateFilter from './datefilters/RxfoodDateFilter'
 
 
 const RXFoodSummary = (props) => {
     return (
-        <div style={{marginTop:'3rem', marginBottom:'3rem'}}>
-            <div className="dateSelect" style={{display:'flex',justifyContent:'center'}}>
+        <div>
+            <div className="dateSelect">
                 <RxfoodDateFilter getDate={props.getDate} datePeriods={props.datePeriods} />     
             </div>
             
-            <div className='nutrients' style={{display:'flex',justifyContent:'center'}}>
-                <div className='meals' style={{marginRight:'10rem'}}>
+            <div className="nutrients">
+                <div className="meals" >
                     <h2>Meals Report</h2>
-                    <div style={{display:'flex'}}>
+                    <div >
                         <ul>
                             <li><b>breakfast:</b> {parseInt(props.mealsCount.breakfast)*props.numDays[0]}</li>
                             <li><b>Dinner: </b>{parseInt(props.mealsCount.dinner)*props.numDays[0]}</li>
@@ -22,9 +22,9 @@ const RXFoodSummary = (props) => {
                     </div>
                 </div>
 
-                <div className="macronutrients" style={{marginRight:'10rem'}}>
+                <div className="macronutrients">
                     <h2>Macronutrients</h2>
-                    <ul className="macronutrients">
+                    <ul>
                         <li><b>Calories:</b> {props.calories} KCAL</li>
                         <li><b>Carbohydrates:</b> {props.avgCarbohydrates} grams ({props.carboPct}% of total calories)</li>
                         <li><b>Fibre: </b>{props.avgFibre} grams of fibre</li>
@@ -34,7 +34,7 @@ const RXFoodSummary = (props) => {
                 </div>
                 <div className="micronutrients">
                     <h2>Micronutrients</h2>
-                    <ul className="micronutrients">
+                    <ul>
                         <li><b>Sodium:</b> {parseInt(props.avgSodium).toFixed(0)} mg</li>
                         <li><b>Calcium:</b> {parseInt(props.avgCalcium).toFixed(0)} mg</li>
                         <li><b>Iron:</b> {parseInt(props.avgIron).toFixed(0)} g</li>

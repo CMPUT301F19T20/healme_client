@@ -24,9 +24,9 @@ const MocapOverallSummary = (props) => {
             <div className='title'>
                 <h1>Motion Capture Summary</h1>
             </div>
-            <Box sx={{ width: '100%' }}>
+            <Box sx={{ width: '100%' }} className='summary'>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                    <Grid className="category" item xs={12}>
+                    <Grid className="category" item xs={6} md={4}>
                         <div className="sit_to_stand">
                            <div className='cate_header'>
                                 <h3>Sit to Stand:</h3>
@@ -34,7 +34,7 @@ const MocapOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={12}>
+                    <Grid className="category" item xs={6} md={4}>
                         <div className="shoulder">
                             <div className='cate_header'>
                                 <h3>Shoulder ROM:</h3>
@@ -42,7 +42,7 @@ const MocapOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={12}>
+                    <Grid className="category" item xs={6} md={4}>
                         <div className="single_leg">
                             <div className='cate_header'>
                                 <h3>Single Leg Balance:</h3>
@@ -50,7 +50,7 @@ const MocapOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={12}>
+                    <Grid className="category" item xs={6} md={4}>
                         <div className="gait">
                             <div className='cate_header'>
                                 <h3>3 Meter Gait Test:</h3>
@@ -58,10 +58,18 @@ const MocapOverallSummary = (props) => {
                             </div>
                         </div>
                     </Grid>
-                    <Grid className="category" item xs={12}>
+                    <Grid className="category" item xs={6} md={4}>
                         <div className="step">
                             <div className='cate_header'>
                                 <h3>2 minute Step Test:</h3>
+                                <h3>{testdone[4] == true ? <CheckIcon /> : <CloseIcon />}</h3>
+                            </div>
+                        </div>
+                    </Grid>
+                    <Grid className="category" item xs={6} md={4}>
+                        <div className="step">
+                            <div className='cate_header'>
+                                <h3>Time Up and Go Test(TUG):</h3>
                                 <h3>{testdone[4] == true ? <CheckIcon /> : <CloseIcon />}</h3>
                             </div>
                         </div>
